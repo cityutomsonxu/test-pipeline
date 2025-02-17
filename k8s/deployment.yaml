@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: test-pipeline-prj
+  name: test-pipeline-backend-api
+  labels:
+    app: test-pipeline-backend-api
+    app.kubernetes.io/part-of: test-pipeline-backend-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-pipeline-backend-api
+  template:
+    metadata:
+      labels:
+        app: test-pipeline-backend-api
+    spec:
+      containers:
+        - name: test-pipeline-backend-api
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Staging
