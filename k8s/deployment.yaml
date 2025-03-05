@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: test-pipeline-prj
+  namespace: test-pipeline-prj2
   name: test-pipeline-backend-api
   labels:
     app: test-pipeline-backend-api
