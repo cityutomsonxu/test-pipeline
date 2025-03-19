@@ -9,7 +9,7 @@ namespace test_pipeline_backend_api.Controllers
         [HttpGet]
         public string Get()
         {
-            return "Hello World 8";
+            return "Hello World 9";
         }
     }
 }
