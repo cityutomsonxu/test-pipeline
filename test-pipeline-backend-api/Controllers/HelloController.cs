@@ -7,9 +7,12 @@ namespace test_pipeline_backend_api.Controllers
     public class HelloController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        public ActionResult<Dictionary<string, string>> GetHeaders()
         {
-            return "Hello World 18";
+            Dictionary<string, string> headerDictionary = Request.Headers
+                .ToDictionary(header => header.Key, header => header.Value.ToString());
+
+            return headerDictionary;
         }
     }
 }
