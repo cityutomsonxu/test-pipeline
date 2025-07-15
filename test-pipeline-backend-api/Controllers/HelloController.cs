@@ -12,7 +12,7 @@ namespace test_pipeline_backend_api.Controllers
             Dictionary<string, string> headerDictionary = Request.Headers
                 .ToDictionary(header => header.Key, header => header.Value.ToString());
 
-            headerDictionary.Add("Hello", "6");
+            headerDictionary.Add("Hello", "7");
 
             return headerDictionary;
         }
